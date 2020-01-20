@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Andrius Adomaitis](https://up.htmlacademy.ru/htmlcss/27/user/828907).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638).
 
 ---
 
