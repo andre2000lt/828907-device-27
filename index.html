@@ -2,10 +2,12 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>HTML Academy: Девайс</title>
+        <title>Магазин Девайс</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+
+        <!-- Шапка -->
 
         <header>
             <a href="index.html">
@@ -13,7 +15,11 @@
                     <use xlink:href="#device-logo" />
                 </svg>
             </a>
-            <!-- Форма поиска  -->
+            <form action="/" method="get">
+                <button type="submit">Поиск</button>
+                <label for="search">Поиск по сайту</label>
+                <input type="search" name="search" id="search" >
+            </form>
             <ul>
                 <li>
                     <a href="">Войти</a>
@@ -22,10 +28,13 @@
             <a href="">Сравнить</a>
             <a href="">Корзина</a>
 
+            <!-- Навигация -->
+
             <nav>
                 <ul>
                     <li>
                         <a href="catalog.html">Каталог товаров</a>
+                        <button type="button">Развернуть / свернуть меню каталога</button>
                     </li>
                     <li>
                         <a href="">Доставка</a>
@@ -41,8 +50,12 @@
 
         </header>
 
+        <!-- Главная -->
+
         <main>
-            <h1>Магазин «Device»</h1>
+            <h1 class="visually-hidden">Магазин «Device»</h1>
+
+            <!-- Слайдер -->
 
             <article>
                 <a href="">
@@ -72,15 +85,15 @@
                 </div>
             </article>
 
+            <!-- Категории товаров -->
+
             <section>
-                <h2>Категории товаров</h2>
+                <h2 class="visually-hidden">Категории товаров</h2>
                 <ul>
                     <li>
-
                         <h3>
                             <a href="">Виртуальная реальность</a>
                         </h3>
-
                     </li>
                     <li>
                         <h3>
@@ -110,8 +123,10 @@
                 </ul>
             </section>
 
+            <!-- Сервисы -->
+
             <section>
-                <h2>Сервисы</h2>
+                <h2 class="visually-hidden">Сервисы</h2>
                 <ul>
                     <li>
                         <button type="button">Доставка</button>
@@ -123,19 +138,22 @@
                         <button type="button">Кредит</button>
                     </li>
                 </ul>
-                <div>
+
+                <section>
                     <h2>Доставка</h2>
                     <p>
                         Мы с удовольствием доставим ваш товар прямо к вашему
                         подъезду совершенно бесплатно! Ведь мы неплохо
                         заработаем, поднимая его на ваш этаж.
                     </p>
-                </div>
+                </section>
 
             </section>
 
+            <!-- Бренды  -->
+
             <section>
-                <h2>Бренды</h2>
+                <h2 class="visually-hidden">Бренды</h2>
                 <ul>
                     <li>
                         <a href="#">
@@ -144,12 +162,12 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="img/logo_gopro.png" alt="Логотип SP Gagjets. Посетить сайт производителя." width="260" height="100">
+                            <img src="img/logo_spgadjets.png" alt="Логотип SP Gagjets. Посетить сайт производителя." width="260" height="100">
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="img/logo_spgadjets.png" alt="Логотип GoPro. Посетить сайт производителя." width="260" height="100">
+                            <img src="img/logo_gopro.png" alt="Логотип GoPro. Посетить сайт производителя." width="260" height="100">
                         </a>
                     </li>
                     <li>
@@ -159,6 +177,8 @@
                     </li>
                 </ul>
             </section>
+
+            <!-- О нас -->
 
             <section>
                 <h2>О нас</h2>
@@ -182,6 +202,8 @@
                 <a href="">Подробнее о нас</a>
             </section>
 
+            <!-- Контакты -->
+
             <section>
                 <h2>Контакты</h2>
                 <p>
@@ -193,7 +215,42 @@
                 </a>
                 <a href="">Напишите нам</a>
             </section>
+
+            <!-- Напишите нам (Модальное окно) -->
+
+            <section>
+                <h2 class="visually-hidden">Напишите нам</h2>
+                <form action="/" method="post">
+                    <div>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+                    </div>
+
+                    <div>
+                        <label for="email">Ваш e-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="email@example.com">
+                    </div>
+
+                    <div>
+                        <label for="message">Текст письма:</label>
+                        <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+                    </div>
+
+                    <button type="submit">Отправить</button>
+                </form>
+                <button type="button">Закрыть окно</button>
+            </section>
+
+            <!-- Карта (Модальное окно) -->
+
+            <section>
+                <h2 class="visually-hidden">Как нас найти</h2>
+                <img src="img/map-big.png" alt="Наше расположение на карте по адресу ул. Строителей 15">
+                <button type="button">Закрыть окно</button>
+            </section>
         </main>
+
+        <!-- Подвал -->
 
         <footer>
             <a href="index.html">
