@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'Gilroy';
-    src: local('Gilroy Light'),
-         local('Gilroy-Light'),
-         url('fonts/Gilroylight.woff2') format('woff2'),
-         url('fonts/Gilroylight.woff') format('woff');
+    font-family: "Gilroy";
+    src: local("Gilroy Light"),
+         local("Gilroy-Light"),
+         url("fonts/Gilroylight.woff2") format("woff2"),
+         url("fonts/Gilroylight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Gilroy';
-    src: local('Gilroy ExtraBold'),
-         local('Gilroy-ExtraBold'),
-         url('fonts/Gilroyextrabold.woff2') format('woff2'),
-         url('fonts/Gilroyextrabold.woff') format('woff');
+    font-family: "Gilroy";
+    src: local("Gilroy ExtraBold"),
+         local("Gilroy-ExtraBold"),
+         url("fonts/Gilroyextrabold.woff2") format("woff2"),
+         url("fonts/Gilroyextrabold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .visually-hidden {
-    position: absolute;
+   position: absolute;
    width: 1px;
    height: 1px;
    margin: -1px;
@@ -56,6 +56,7 @@ body {
 .site-navigation,
 .title, /* Заголовки H1-H6 */
 .button, /* Кнопки с желтой полоской посередине */
+.about-us ul,
 .product-filter legend {
     font-family: "Gilroy", "Arial Black", sans-serif;
     font-weight: 800;
@@ -87,19 +88,26 @@ body {
     padding: 8px 10px;
     border-style: solid;
     border-width: 0;
-
-    background: url(../img/button_pattern.png) repeat-x 0 50%;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 }
 
 .button:hover,
 .button:active,
 .button:focus {
-    background-repeat: repeat;
+    background-image: url();
+    background-color: #f0c52e;
 }
 
-.button:active{
+.button:active {
     outline: none;
     color: rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-size: 47px;
+    line-height: 1.02;
+    letter-spacing: 0.47px;
 }
 
 /* -- (Конец) ОБЩИЕ -- */
@@ -124,14 +132,21 @@ body {
     color: inherit;
 }
 
+.transparent-button.logout-link {
+    opacity: 0.3;
+}
 /* -- (Конец) ШАПКА + ПОДВАЛ -- */
 
 
 /* -- ШАПКПА -- */
 
 .header {
-    background-color: #f7e296;
+    background-image: linear-gradient(to bottom, white 40px, rgb(240, 197, 46, 0.5) 40px);
     color: black;
+}
+
+.header .device-logo {
+    margin-top: 23px;
 }
 
 .search-field {
@@ -179,6 +194,38 @@ body {
 /* -- (Конец) ШАПКА  -- */
 
 
+/* -- ГЛАВНАЯ (Index.html) -- */
+
+
+/* -- О НАС, КОНТАКТЫ -- */
+
+.about-us p,
+.about-us ul,
+.write-us p {
+      letter-spacing: normal;
+}
+
+.about-us p,
+.write-us p {
+    color: #464646;
+}
+
+.about-us ul {
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+.more-details-link,
+.write-us-link {
+    min-width: 260px;
+}
+
+/* -- (Конец) О НАС, КОНТАКТЫ -- */
+
+
+/* -- (Конец) ГЛАВНАЯ (Index.html) -- */
+
+
 /* -- ПОДВАЛ -- */
 
 .footer {
@@ -196,7 +243,7 @@ body {
     fill: #ffc600;
 }
 
-.footer .transparent-button {
+.footer .transparent-button:not(.logout-link) {
     opacity: 0.7;
 }
 
@@ -213,7 +260,7 @@ body {
     font: inherit;
 }
 
-.socials{
+.socials {
     text-align: center;
 }
 
@@ -283,7 +330,7 @@ body {
 
 /* -- ФИЛЬТР ТОВАРОВ -- */
 
-.product-filter-label{
+.product-filter-label {
     background-color: #d9d9d9;
 }
 
