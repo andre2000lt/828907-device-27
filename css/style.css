@@ -1,9 +1,382 @@
-.external-svg
-{
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Light'),
+         local('Gilroy-Light'),
+         url('fonts/Gilroylight.woff2') format('woff2'),
+         url('fonts/Gilroylight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy ExtraBold'),
+         local('Gilroy-ExtraBold'),
+         url('fonts/Gilroyextrabold.woff2') format('woff2'),
+         url('fonts/Gilroyextrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* -- ОБЩИЕ -- */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+    line-height: 2;
+    letter-spacing: 0.15px;
+
+    background-color: white;
+}
+
+.visually-hidden {
+    position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+ }
+
+.modal-window,
+.submenu {
     display: none;
 }
 
-.device-logo-orange
-{
+.site-navigation,
+.title, /* Заголовки H1-H6 */
+.button, /* Кнопки с желтой полоской посередине */
+.product-filter legend {
+    font-family: "Gilroy", "Arial Black", sans-serif;
+    font-weight: 800;
+}
+
+.site-navigation,
+.site-navigation ul,
+.user-menu,
+.socials {
+    list-style: none;
+}
+
+.site-navigation-link, /* 100% совпадение парвметров шрифта */
+.button {
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    line-height: 1.33;
+    text-transform: uppercase;
+}
+
+.button { /* Кнопки с желтой полоской посередине */
+    display: inline-block;
+
+    color: black;
+    text-align: center;
+    text-decoration: none;
+
+    height: 40px;
+    padding: 8px 10px;
+    border-style: solid;
+    border-width: 0;
+
+    background: url(../img/button_pattern.png) repeat-x 0 50%;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+    background-repeat: repeat;
+}
+
+.button:active{
+    outline: none;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* -- (Конец) ОБЩИЕ -- */
+
+
+/* -- ШАПКА + ПОДВАЛ -- */
+
+.device-logo:hover,
+.header .transparent-button:hover, /* .transparent-button - ссылка с картинкой слева */
+.site-navigation a:hover {
+    opacity: 0.6;
+}
+
+.device-logo:active,
+.header .transparent-button:active,
+.site-navigation a:active {
+    opacity: 0.3;
+}
+
+.site-navigation-link,
+.transparent-button {
+    color: inherit;
+}
+
+/* -- (Конец) ШАПКА + ПОДВАЛ -- */
+
+
+/* -- ШАПКПА -- */
+
+.header {
+    background-color: #f7e296;
+    color: black;
+}
+
+.search-field {
+    font: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    border-width: 0;
+    background-color: transparent;
+    opacity: 0.3;
+    height: 49.5px;
+}
+
+.search-field:hover {
+    opacity: 0.6;
+}
+
+.search-field:focus {
+    opacity: 1;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
+.search-button {
+    background-color: transparent;
+    border: 2px solid black;
+    border-style: solid;
+    padding: 15px 21px;
+    margin-left: -4px;
+}
+
+.search-button:hover,
+.search-button:active {
+    background-color: black;
+}
+
+.search-button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.search-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* -- (Конец) ШАПКА  -- */
+
+
+/* -- ПОДВАЛ -- */
+
+.footer {
+    color: white;
+    background-color: #464646;
+}
+
+.phone-number,
+.socials a,
+.developer-link {
+    color: inherit;
+}
+
+.device-logo-orange {
     fill: #ffc600;
+}
+
+.footer .transparent-button {
+    opacity: 0.7;
+}
+
+.footer .transparent-button:hover {
+    opacity: 1;
+}
+
+.footer .transparent-button:active {
+    opacity: 0.3;
+}
+
+
+.phone-number {
+    font: inherit;
+}
+
+.socials{
+    text-align: center;
+}
+
+.socials a {
+    opacity: 0.3;
+}
+
+.socials a:hover {
+    opacity: 0.6;
+}
+
+.socials a:active {
+    opacity: 0.1;
+}
+
+.developer-link:hover {
+    opacity: 0.6;
+}
+
+.developer-link:active {
+    opacity: 0.1;
+}
+
+
+
+/* -- (Конец) ПОДВАЛ  -- */
+
+
+
+/* =====  Catalog.html  ===== */
+
+
+/* -- ГЛАВНАЯ (Catalog.html) -- */
+
+.page-title {
+    font-size: 47px;
+    line-height: 1.02;
+    letter-spacing: 0.47px;
+}
+
+.breadcrumbs,
+.product-filter-form ul,
+.product-list {
+    list-style: none;
+}
+
+.breadcrumbs a {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.14px;
+    color: black;
+    opacity: 0.3;
+}
+
+.breadcrumbs a:hover {
+    opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+    opacity: 0.1;
+}
+
+.breadcrumbs-current {
+    opacity: 0.3;
+}
+
+
+/* -- ФИЛЬТР ТОВАРОВ -- */
+
+.product-filter-label{
+    background-color: #d9d9d9;
+}
+
+.product-filter {
+    background-color: #ebebeb;
+}
+
+.product-filter fieldset {
+    border: none;
+}
+
+.product-filter legend {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.18px;
+}
+
+.checkbox-list,
+.radio-list {
+    font-size: 14px;
+    line-height: 2.86;
+    letter-spacing: 0.14px;
+}
+
+.checkbox-input:hover,
+.radio-input:hover {
+    opacity: 0.6;
+}
+
+.checkbox-input:disabled,
+.radio-input:disabled {
+    opacity: 0.25;
+}
+
+.checkbox-input:disabled + label,
+.radio-input:disabled + label {
+    color: #a6a6a6;
+}
+
+.filter-submit {
+    min-width: 200px;
+    line-height: normal;
+}
+
+/* -- (Конец) ФИЛЬТР ТОВАРОВ -- */
+
+
+/* -- КАТАЛОГ ТОВАРОВ -- */
+.product-title {
+   font-size: 18px;
+   line-height: 1.33;
+   letter-spacing: 0.18px;
+   color: black;
+}
+
+.add-to-compare {
+    min-width: 200px;
+    color: black;
+}
+
+.add-to-compare {
+    opacity: 0.5;
+    font-size: 13px;
+    line-height: 1.54;
+    letter-spacing: 0.13px;
+}
+
+.add-to-compare:hover {
+    opacity: 1;
+}
+
+.add-to-compare:active {
+    opacity: 0.2;
+}
+
+.product-price {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #464646;
+    line-height: 1.5;
+    letter-spacing: 0.16px;
+
+}
+
+/* -- (Конец) КАТАЛОГ ТОВАРОВ -- */
+
+
+/* =====  (Конец) Catalog.html  ===== */
+
+
+
+/* -- Внешние ресурсы -- */
+.external-svg {
+    display: none;
 }
