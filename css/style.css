@@ -57,7 +57,8 @@ body {
 .title, /* Заголовки H1-H6 */
 .button, /* Кнопки с желтой полоской посередине */
 .about-us ul,
-.product-filter legend {
+.product-filter legend,
+.pagination {
     font-family: "Gilroy", "Arial Black", sans-serif;
     font-weight: 800;
 }
@@ -65,6 +66,9 @@ body {
 .site-navigation,
 .site-navigation ul,
 .user-menu,
+.popular-categories-list,
+.services-menu,
+.brand-list,
 .socials {
     list-style: none;
 }
@@ -99,8 +103,8 @@ body {
     background-color: #f0c52e;
 }
 
-.button:active {
-    outline: none;
+.button:active,
+.button:focus {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -178,8 +182,10 @@ body {
 }
 
 .search-button:hover,
-.search-button:active {
+.search-button:active,
+.search-button:focus {
     background-color: black;
+    outline: none;
 }
 
 .search-button:hover {
@@ -187,7 +193,8 @@ body {
     cursor: pointer;
 }
 
-.search-button:active {
+.search-button:active,
+.search-button:focus {
     color: rgba(255, 255, 255, 0.3);
 }
 
@@ -197,12 +204,133 @@ body {
 /* -- ГЛАВНАЯ (Index.html) -- */
 
 
+/* -- СЛАЙДЕР -- */
+
+.slider-title {
+    font-size: 47px;
+    line-height: 1.19;
+    letter-spacing: 0.47px;
+}
+
+.slider-text {
+    color: #464646;
+}
+
+.slaider-more-details-link {
+    min-width: 220px;
+}
+
+.slider-table td {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.36px;
+}
+
+.slider-table th {
+    font-size: 13px;
+    color: #464646;
+    line-height: 1.54;
+    letter-spacing: 0.13px;
+}
+
+/* -- (Конец)СЛАЙДЕР -- */
+
+/* -- ПОПУЛЯРНЫЕ КАТЕГОРИИ, СЕРВИСЫ -- */
+
+.popular-category-title {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.18px;
+    color: black;
+}
+
+.serviсes {
+    background-image: linear-gradient(to bottom, white 140px, #e5e5e5 140px);
+}
+
+.services-menu {
+    width: 285px;
+    padding: 0;
+    padding-top: 120px;
+    margin-left: 50px;
+    border-right: 7px solid black;
+
+}
+
+.services-button {
+    min-width: 160px;
+}
+
+.current-services-button,
+.services-button:active,
+.services-button:focus {
+    height: 40px;
+    color: #f7e184;
+    background-image: url();
+    background-color: black;
+    outline: none;
+}
+
+.current-services-button:hover,
+.current-services-button:active,
+.current-services-button:focus {
+    background-color: black;
+}
+
+.current-services-button + .service-button-tail,
+.services-button:active + .service-button-tail,
+.services-button:focus + .service-button-tail {
+    display: inline-block;
+    width: 117.9px;
+    height: 40px;
+    margin-left: -4px;
+    background-color: black;
+    vertical-align: bottom;
+}
+
+.service-text {
+    color: #464646;
+}
+
+/* -- (Конец)ПОПУЛЯРНЫЕ КАТЕГОРИИ, СЕРВИСЫ -- */
+
+/* -- БРЭНДЫ -- */
+.brand-item {
+    position: relative;
+
+    width: 260px;
+    height: 100px;
+
+}
+
+.brand-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gray-brand-image {
+    z-index: 1;
+}
+
+.gray-brand-image:hover +.color-brand-image {
+    display: block;
+}
+
+.color-brand-image {
+    display: none;
+}
+
+/* -- (Конец) БРЭНДЫ -- */
+
 /* -- О НАС, КОНТАКТЫ -- */
 
 .about-us p,
 .about-us ul,
 .write-us p {
-      letter-spacing: normal;
+    letter-spacing: normal;
 }
 
 .about-us p,
@@ -215,7 +343,7 @@ body {
     line-height: 2.5;
 }
 
-.more-details-link,
+.more-about-us-link,
 .write-us-link {
     min-width: 260px;
 }
@@ -303,8 +431,17 @@ body {
 
 .breadcrumbs,
 .product-filter-form ul,
-.product-list {
+.product-sorting ul,
+.product-list,
+.page-numbers-list {
     list-style: none;
+}
+
+.product-filter-label,
+.product-sorting-label {
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 3.2px;
 }
 
 .breadcrumbs a {
@@ -323,14 +460,13 @@ body {
     opacity: 0.1;
 }
 
-.breadcrumbs-current {
+.current-breadcrumb {
     opacity: 0.3;
 }
 
 
 /* -- ФИЛЬТР ТОВАРОВ -- */
-
-.product-filter-label {
+.product-filter-head {
     background-color: #d9d9d9;
 }
 
@@ -374,11 +510,40 @@ body {
     min-width: 200px;
     line-height: normal;
 }
-
 /* -- (Конец) ФИЛЬТР ТОВАРОВ -- */
 
 
-/* -- КАТАЛОГ ТОВАРОВ -- */
+/* -- КАТАЛОГ ТОВАРОВ, СОРТИРОВКА ТОВАРОВ -- */
+.product-sorting-link {
+    opacity: 0.3;
+    font-size: 14px;
+    line-height: 1.29;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: black;
+}
+
+.product-sorting-icon {
+    opacity: 0.3;
+}
+
+.product-sorting-link:hover,
+.product-sorting-icon:hover {
+    opacity: 0.6;
+}
+
+.current-product-sorting-link:hover,
+.current-product-sorting-icon:hover {
+    opacity: 1;
+}
+
+.current-product-sorting-link,
+.current-product-sorting-icon,
+.product-sorting-link:active,
+.product-sorting-icon:active {
+    opacity: 1;
+}
+
 .product-title {
    font-size: 18px;
    line-height: 1.33;
@@ -415,8 +580,62 @@ body {
     letter-spacing: 0.16px;
 
 }
+/* -- (Конец) КАТАЛОГ ТОВАРОВ, СОРТИРОВКА ТОВАРОВ -- */
 
-/* -- (Конец) КАТАЛОГ ТОВАРОВ -- */
+/* -- (Конец) ПАГИНАЦИЯ -- */
+.page-number,
+.page-number a {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 3.2px;
+    color: black;
+}
+
+.page-number a {
+    opacity: 0.3;
+}
+
+.page-number a:hover {
+    opacity: 0.6;
+}
+
+.page-number a:active {
+    opacity: 1;
+}
+
+.pagination {
+    background-color: #ebebeb;
+}
+
+.pagination-button {
+    display: inline-block;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+
+    width: 136px;
+    height: 70px;
+    padding: 23px 10px;
+
+    background-color: transparent;
+}
+
+.pagination-button:hover,
+.pagination-button:active,
+.pagination-button:focus {
+    background-color: #d9d9d9;
+}
+
+.pagination-button:active,
+.pagination-button:focus {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* -- (Конец) ПАГИНАЦИЯ -- */
 
 
 /* =====  (Конец) Catalog.html  ===== */

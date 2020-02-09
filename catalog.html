@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Девайс: Каталог товаров</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap&subset=cyrillic" rel="stylesheet">
+        <link <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -103,7 +103,7 @@
                 <li>
                     <a href="catalog.html">Каталог товаров</a>
                 </li>
-                <li class="breadcrumbs-current">
+                <li class="current-breadcrumb">
                     Моноподы для селфи
                 </li>
             </ul>
@@ -112,8 +112,8 @@
 
             <section class="product-filter">
                 <h2 class="visually-hidden">Фильтр товаров</h2>
-                <div class="product-filter-label">
-                    <b>Фильтр:</b>
+                <div class="product-filter-head">
+                    <b class="title product-filter-label">Фильтр:</b>
                 </div>
                 <form class="product-filter-form" action="/" method="get">
                     <!-- Фильтр по цене -->
@@ -173,30 +173,32 @@
 
             <!-- КАТАЛОГ ТОВАРОВ -->
 
-            <section>
+            <section class="products">
                 <h2 class="visually-hidden">Каталог товаров</h2>
-                <div>
-                    <b>Сортировка:</b>
+                
+                <!-- Сортировка товаров -->
+                <div class="product-sorting">
+                    <b class="title product-sorting-label">Сортировка:</b>
                     <ul>
                         <li>
-                            <a href="">По цене</a>
+                            <a class="product-sorting-link current-product-sorting-link" href="">По цене</a>
                         </li>
                         <li>
-                            <a href="">По типу</a>
+                            <a class="product-sorting-link" href="">По типу</a>
                         </li>
                         <li>
-                            <a href="">По популярности</a>
+                            <a class="product-sorting-link" href="">По популярности</a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="">
-                                Сортировать по возврастанию
+                            <a class="product-sorting-icon current-product-sorting-icon" href="">
+                                <img src="img/catalog/icon-up-dir.svg" alt="Сортировать по возрастанию" width="11" height="10">
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                Сортировать по убыванию
+                            <a class="product-sorting-icon" href="">
+                                <img src="img/catalog/icon-down-dir.svg" alt="Сортировать по убыванию" width="11" height="10">
                             </a>
                         </li>
                     </ul>
@@ -260,20 +262,20 @@
 
                 <!-- ПАГИНАЦИЯ -->
 
-                <div>
-                    <a href="">Назад</a>
-                    <ul>
-                        <li>
+                <div class="pagination">
+                    <a class="pagination-button" href="">Назад</a>
+                    <ul class="page-numbers-list">
+                        <li class="page-number current-page-number">
                             1
                         </li>
-                        <li>
+                        <li class="page-number">
                             <a href="">2</a>
                         </li>
-                        <li>
+                        <li class="page-number">
                             <a href="">3</a>
                         </li>
                     </ul>
-                    <a href="">Вперед</a>
+                    <a class="pagination-button" href="">Вперед</a>
                 </div>
 
             </section>
