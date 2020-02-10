@@ -260,7 +260,21 @@ body {
 }
 
 .services-button {
+    position: relative;
     min-width: 160px;
+}
+
+.services-button:active::after,
+.services-button:focus::after,
+.current-services-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 160px;
+    width: 118px;
+    height: 40px;
+    background-color: black;
+
 }
 
 .current-services-button,
@@ -279,16 +293,9 @@ body {
     background-color: black;
 }
 
-.current-services-button + .service-button-tail,
-.services-button:active + .service-button-tail,
-.services-button:focus + .service-button-tail {
-    display: inline-block;
-    width: 117.9px;
-    height: 40px;
-    margin-left: -4px;
-    background-color: black;
-    vertical-align: bottom;
-}
+
+
+
 
 .service-text {
     color: #464646;
