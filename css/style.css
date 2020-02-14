@@ -595,14 +595,35 @@ body {
 }
 
 .footer-bottom {
+    position: relative;
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    text-align: right;
+}
+
+.footer-bottom::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: Calc(50%-4px);
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
+
+}
+
+.footer-bottom-right {
+    display: flex;
+    justify-content: space-between;
+    width: 660px;
+
+
 }
 
 .socials {
     display:flex;
-    justify-content: space-between;
+    justify-content: ;
     align-items: center;
 
     /* временно */
