@@ -34,7 +34,14 @@ body {
     line-height: 2;
     letter-spacing: 0.15px;
 
+    min-width: 1440px;
+
     background-color: white;
+}
+
+.container {
+    width: 1160px;
+    margin: auto;
 }
 
 .visually-hidden {
@@ -53,7 +60,8 @@ body {
     display: none;
 }
 
-.site-navigation,
+.main-navigation,
+.footer-navigation,
 .title, /* Заголовки H1-H6 */
 .button, /* Кнопки с желтой полоской посередине */
 .about-us ul,
@@ -63,14 +71,16 @@ body {
     font-weight: 800;
 }
 
-.site-navigation,
-.site-navigation ul,
+.main-navigation ul,
 .user-menu,
 .popular-categories-list,
 .services-menu,
 .brand-list,
+.footer-navigation,
 .socials {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .site-navigation-link, /* 100% совпадение парвметров шрифта */
@@ -112,6 +122,16 @@ body {
     font-size: 47px;
     line-height: 1.02;
     letter-spacing: 0.47px;
+    margin:0;
+}
+
+.line {
+    width: 80px;
+    height: 7px;
+}
+
+.black-line {
+    background-color: black;
 }
 
 /* -- (Конец) ОБЩИЕ -- */
@@ -121,19 +141,25 @@ body {
 
 .device-logo:hover,
 .header .transparent-button:hover, /* .transparent-button - ссылка с картинкой слева */
-.site-navigation a:hover {
+.site-navigation-link:hover,
+.site-navigation-sublink:hover {
     opacity: 0.6;
 }
 
 .device-logo:active,
 .header .transparent-button:active,
-.site-navigation a:active {
+.site-navigation-link:active,
+.site-navigation-sublink:active {
     opacity: 0.3;
 }
 
 .site-navigation-link,
 .transparent-button {
     color: inherit;
+}
+
+.transparent-button {
+    height: auto;
 }
 
 .transparent-button.logout-link {
@@ -145,12 +171,37 @@ body {
 /* -- ШАПКПА -- */
 
 .header {
-    background-image: linear-gradient(to bottom, white 40px, rgb(240, 197, 46, 0.5) 40px);
     color: black;
+    min-height: 226px;
+
 }
 
-.header .device-logo {
-    margin-top: 23px;
+.header-inner {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 226px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 23px;
+
+    background-image: linear-gradient(to bottom, white 40px, rgb(240, 197, 46, 0.5) 40px);
+
+
+}
+
+
+.header .device-logo-link {
+    width: 163px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.header-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .search-field {
@@ -197,6 +248,71 @@ body {
 .search-button:focus {
     color: rgba(255, 255, 255, 0.3);
 }
+
+.header-middle-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 500px;
+    max-width: 600px;
+
+}
+
+.header .user-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.user-menu li:not(:last-child){
+    margin-right: 15px;
+}
+
+.header-buttons, .footer-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-right: -35px;
+    margin-left: 20px;
+    width: 230px;
+}
+
+.header-buttons .transparent-button,
+.footer-buttons .transparent-button {
+        margin-right: 35px;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-bottom-right {
+    display: flex;
+    justify-content: space-between;
+    min-width: 500px;
+    max-width: 700px;
+}
+
+.product-navigation {
+    width: 300px;
+}
+
+.service-navigation {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.service-navigation > li {
+    margin-right: 35px;
+}
+
+.header-contacts-button {
+    margin-left: 20px;
+}
+
+
 
 /* -- (Конец) ШАПКА  -- */
 
@@ -334,6 +450,67 @@ body {
 
 /* -- О НАС, КОНТАКТЫ -- */
 
+.columns-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 650px;
+    padding-bottom: 80px;
+}
+
+.columns .black-line {
+    margin-bottom: 45px;
+}
+
+.columns .section-title {
+    margin-bottom: 45px;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 475px;
+}
+
+
+.about-us .more-about-us-link {
+    margin-top: auto;
+}
+
+.feature-text {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.delivery-info p {
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+.delivery-info ul {
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 15px;
+}
+
+.write-us {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.write-us p{
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.write-us .write-us-link {
+    margin-top: auto;
+}
+
+
 .about-us p,
 .about-us ul,
 .write-us p {
@@ -368,12 +545,74 @@ body {
     background-color: #464646;
 }
 
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 74px;
+    padding-bottom: 65px;
+}
+
+.footer-top {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-top-right {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 700px;
+}
+
+.footer .user-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.footer-middle {
+    display:flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 60px;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: wrap;
+    min-width: 440px;
+    max-width: 600px;
+}
+
+.footer-bottom {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* временно */
+    width: 200px;
+}
+
 .phone-number,
 .socials a,
 .developer-link {
     color: inherit;
 }
 
+.footer .device-logo-link {
+    width: 163px;
+    height: 35px;
+}
 .device-logo-orange {
     fill: #ffc600;
 }
@@ -393,6 +632,10 @@ body {
 
 .phone-number {
     font: inherit;
+}
+
+.yellow-line {
+    background-color: #ffc600;
 }
 
 .socials {
@@ -442,6 +685,8 @@ body {
 .product-list,
 .page-numbers-list {
     list-style: none;
+    margin:0;
+    padding: 0;
 }
 
 .product-filter-label,
@@ -449,6 +694,41 @@ body {
       font-size: 16px;
       line-height: 1.5;
       letter-spacing: 3.2px;
+}
+
+.breadcrumbs-wrapper {
+    padding-left: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.breadcrumbs-wrapper .page-title {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.breadcrumbs li {
+    margin-right: 10px;
+}
+
+.products {
+    display: flex;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.product-filter {
+    width: 465px;
+}
+
+.product-block {
+    width: 975px;
 }
 
 .breadcrumbs a {
@@ -474,14 +754,30 @@ body {
 
 /* -- ФИЛЬТР ТОВАРОВ -- */
 .product-filter-head {
+    height: 70px;
     background-color: #d9d9d9;
+    padding-left: 200px;
+}
+
+.product-filter-form {
+    padding-top: 65px;
+    padding-left: 200px;
 }
 
 .product-filter {
     background-color: #ebebeb;
 }
 
+.filter-box {
+    width: 200px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-top: 2px solid black;
+}
+
 .product-filter fieldset {
+    padding: 0;
+    margin: 0;
     border: none;
 }
 
@@ -521,6 +817,21 @@ body {
 
 
 /* -- КАТАЛОГ ТОВАРОВ, СОРТИРОВКА ТОВАРОВ -- */
+.product-sorting {
+    display: flex;
+    /* временно */
+    justify-content: space-between;
+    height: 70px;
+    background-color: #ebebeb;
+    padding-right: 140px;
+    padding-left: 70px;
+}
+
+.product-sorting-types {
+    display: flex;
+
+}
+
 .product-sorting-link {
     opacity: 0.3;
     font-size: 14px;
@@ -551,7 +862,45 @@ body {
     opacity: 1;
 }
 
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 140px;
+    padding-left: 70px;
+    padding-top: 70px;
+
+}
+
+.product-item {
+    width: 360px;
+    margin-bottom: 40px;
+}
+
+.product-item .hidden-block {
+    display: none;
+}
+
+.product-item .product-image {
+    margin-bottom: 30px;
+}
+
+.product-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.product-description .product-price {
+    width: 100px;
+    text-align: right;
+    margin-left: 10px;
+}
+
 .product-title {
+    margin: 0;
    font-size: 18px;
    line-height: 1.33;
    letter-spacing: 0.18px;
@@ -585,11 +934,21 @@ body {
     color: #464646;
     line-height: 1.5;
     letter-spacing: 0.16px;
-
 }
+
+
 /* -- (Конец) КАТАЛОГ ТОВАРОВ, СОРТИРОВКА ТОВАРОВ -- */
 
-/* -- (Конец) ПАГИНАЦИЯ -- */
+/* -- ПАГИНАЦИЯ -- */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    margin-right: 140px;
+    margin-left: 70px;
+    margin-bottom: 75px;
+}
+
 .page-number,
 .page-number a {
     font-size: 16px;
@@ -608,10 +967,6 @@ body {
 
 .page-number a:active {
     opacity: 1;
-}
-
-.pagination {
-    background-color: #ebebeb;
 }
 
 .pagination-button {
