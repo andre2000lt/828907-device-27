@@ -130,9 +130,6 @@ body {
     height: 7px;
 }
 
-.black-line {
-    background-color: black;
-}
 
 /* -- (Конец) ОБЩИЕ -- */
 
@@ -177,8 +174,6 @@ body {
 }
 
 .header-inner {
-    display: flex;
-    flex-direction: column;
 
     min-height: 226px;
     padding-left: 60px;
@@ -458,12 +453,24 @@ body {
     padding-bottom: 80px;
 }
 
-.columns .black-line {
+.columns .section-title {
     margin-bottom: 45px;
 }
 
-.columns .section-title {
-    margin-bottom: 45px;
+.about-us, .write-us {
+    position: relative;
+    padding-top: 52px;
+
+}
+
+.about-us::after, .write-us::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 7px;
+    background-color: black;
 }
 
 .about-us {
@@ -472,7 +479,6 @@ body {
     align-items: flex-start;
     width: 475px;
 }
-
 
 .about-us .more-about-us-link {
     margin-top: auto;
