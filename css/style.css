@@ -18,7 +18,7 @@
 }
 
 /* -- ОБЩИЕ -- */
-* {
+*, *::after, *::before {
     box-sizing: border-box;
 }
 
@@ -75,7 +75,7 @@ body {
 .user-menu,
 .popular-categories-list,
 .services-menu,
-.brand-list,
+.brands-list,
 .footer-navigation,
 .socials {
     list-style: none;
@@ -169,16 +169,17 @@ body {
 
 .header {
     color: black;
-    min-height: 226px;
+
 
 }
 
 .header-inner {
 
-    min-height: 226px;
+
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 23px;
+    padding-bottom: 23px;
 
     background-image: linear-gradient(to bottom, white 40px, rgb(240, 197, 46, 0.5) 40px);
 
@@ -316,63 +317,179 @@ body {
 
 
 /* -- СЛАЙДЕР -- */
+.slider {
+    margin-bottom: 100px;
+}
 
-.slider-title {
+.slider-inner {
+
+    /* overflow: hidden; */
+}
+
+.slider-slides {
+    display: flex;
+    width:300%;
+}
+
+.slide {
+    display: flex;
+    justify-content: space-between;
+    width: 1160px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-image: linear-gradient(to bottom, rgb(240, 197, 46, 0.5) 140px, white 140px);
+}
+
+.slide-image {
+    padding-top: 23px;
+}
+
+.slide-right-side {
+    position: relative;
+    width: 500px;
+    padding-top: 105px;
+}
+
+.slide-right-side::before {
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100px;
+    height: 7px;
+    background-color: white;
+}
+
+.slide-right-side::after {
+    position: absolute;
+    right: -15px;
+    top: 10px;
+
+    color: white;
+    font-size: 179px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 1.79px;
+    font-family: "Gilroy", "Arial Black", sans-serif;
+}
+
+.slide:nth-child(1) .slide-right-side::after {
+    content:"01";
+}
+
+.slide:nth-child(2) .slide-right-side::after {
+    content:"02";
+}
+
+.slide:nth-child(3) .slide-right-side::after {
+    content:"03";
+}
+
+.slide-title {
+    position: relative;
+    z-index: 2;
     font-size: 47px;
     line-height: 1.19;
     letter-spacing: 0.47px;
+    margin:0;
+    margin-bottom: 18px;
+    width:505px;
 }
 
-.slider-text {
+.slide-text {
     color: #464646;
+    margin: 0;
+    margin-bottom: 40px;
 }
 
-.slaider-more-details-link {
+.slaide-more-details-link {
     min-width: 220px;
+    margin-bottom: 45px;
 }
 
-.slider-table td {
+.slide-table td {
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 300;
     font-size: 36px;
     line-height: 1.33;
     letter-spacing: 0.36px;
+    text-align: left;
+
+
+}
+.slide-table-row:not(:last-child) td {
+    padding-bottom: 8px;
 }
 
-.slider-table th {
+.slide-table td:not(:last-child),
+.slide-table th:not(:last-child)  {
+
+    padding-right: 70px;
+}
+
+.slide-table th {
     font-size: 13px;
     color: #464646;
     line-height: 1.54;
     letter-spacing: 0.13px;
+    text-align: left;
 }
 
 /* -- (Конец)СЛАЙДЕР -- */
 
 /* -- ПОПУЛЯРНЫЕ КАТЕГОРИИ, СЕРВИСЫ -- */
+.popular-categories {
+    margin-bottom: 84px;
+}
+
+.popular-categories-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-categories-list li {
+    width: 160px;
+}
 
 .popular-category-title {
     font-size: 18px;
     line-height: 1.33;
     letter-spacing: 0.18px;
+    margin: 0;
+
+}
+
+.popular-category-title a
+{
     color: black;
 }
 
 .serviсes {
-    background-image: linear-gradient(to bottom, white 140px, #e5e5e5 140px);
+    padding-bottom: 70px;
+    margin-bottom: 94px;
+    background-image: linear-gradient(to bottom, white 100px, #e5e5e5 100px);
 }
 
 .services-menu {
+    flex-shrink: 0;
     width: 285px;
     padding: 0;
-    padding-top: 120px;
+    padding-top: 80px;
+    padding-bottom: 65px;
     margin-left: 50px;
+    margin-right: 116px;
     border-right: 7px solid black;
 
 }
 
+.services-menu li:not(:last-child) {
+    margin-bottom: 24px;
+}
+
 .services-button {
     position: relative;
-    min-width: 160px;
+    width: 160px;
+
 }
 
 .services-button:active::after,
@@ -404,17 +521,46 @@ body {
     background-color: black;
 }
 
+.services-inner {
+    display: flex;
+    justify-content: space-between;
+}
 
+.current-service {
+    width: 760px;
+}
 
+.services-list {
+    display: flex;
+    width: 300%;
+}
 
+.service {
+    width: 760px;
+    padding-top: 72px;
+}
+
+.service .section-title {
+    margin-bottom: 33px;
+}
 
 .service-text {
     color: #464646;
+    width: 430px;
 }
 
 /* -- (Конец)ПОПУЛЯРНЫЕ КАТЕГОРИИ, СЕРВИСЫ -- */
 
 /* -- БРЭНДЫ -- */
+.product-brands {
+    margin-bottom: 93px;
+}
+
+.brands-list {
+    display: flex;
+    justify-content: space-between;
+}
+
 .brand-item {
     position: relative;
 
@@ -427,6 +573,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+
+
 }
 
 .gray-brand-image {
@@ -723,6 +871,8 @@ body {
       letter-spacing: 3.2px;
 }
 
+
+/* Хдебные крошки  */
 .breadcrumbs-wrapper {
     padding-left: 60px;
     padding-top: 40px;
@@ -740,8 +890,9 @@ body {
     width: 90%;
 }
 
-.breadcrumbs li {
-    margin-right: 10px;
+.breadcrumbs li:not(:last-child) {
+    padding-right: 25px;
+    margin-right: 20px;
 }
 
 .products {
@@ -750,9 +901,7 @@ body {
     margin: 0 auto;
 }
 
-.product-filter {
-    width: 465px;
-}
+
 
 .product-block {
     width: 975px;
@@ -780,10 +929,23 @@ body {
 
 
 /* -- ФИЛЬТР ТОВАРОВ -- */
+.product-filter {
+    width: 465px;
+}
+
 .product-filter-head {
+    display: flex;
+    align-items: center;
     height: 70px;
+    text-transform: uppercase;
     background-color: #d9d9d9;
     padding-left: 200px;
+
+}
+
+.product-filter-label {
+    vertical-align: bottom;
+
 }
 
 .product-filter-form {
@@ -800,6 +962,7 @@ body {
     padding-bottom: 10px;
     padding-top: 10px;
     border-top: 2px solid black;
+    padding-bottom: 30px;
 }
 
 .product-filter fieldset {
@@ -846,17 +1009,34 @@ body {
 /* -- КАТАЛОГ ТОВАРОВ, СОРТИРОВКА ТОВАРОВ -- */
 .product-sorting {
     display: flex;
-    /* временно */
     justify-content: space-between;
+    align-items: center;
     height: 70px;
     background-color: #ebebeb;
     padding-right: 140px;
     padding-left: 70px;
 }
+.product-sorting-types-wripper {
+    display: flex;
+    justify-content: space-between;
+    min-width: 500px;
+    max-width: 800px;
+    align-items: center;
+}
+
+.product-sorting-label {
+    text-transform: uppercase;
+    width: 200px;
+    flex-shrink: 0;
+}
 
 .product-sorting-types {
     display: flex;
+    min-width: 300px;
+}
 
+.product-sorting-types li {
+    margin-right: 30px;
 }
 
 .product-sorting-link {
@@ -866,6 +1046,7 @@ body {
     font-weight: 400;
     letter-spacing: normal;
     color: black;
+    vertical-align: middle;
 }
 
 .product-sorting-icon {
@@ -974,6 +1155,15 @@ body {
     margin-right: 140px;
     margin-left: 70px;
     margin-bottom: 75px;
+}
+
+.page-numbers-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 90px;
+    max-width: 160px;
 }
 
 .page-number,
