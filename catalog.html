@@ -120,8 +120,8 @@
                     <li>
                         <a href="catalog.html">Каталог товаров</a>
                     </li>
-                    <li class="current-breadcrumb">
-                        Моноподы для селфи
+                    <li >
+                        <span class="current-breadcrumb">Моноподы для селфи</span>
                     </li>
                 </ul>
             </div> <!-- / .container  -->
@@ -132,68 +132,75 @@
                 <section class="product-filter">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
                     <div class="product-filter-head">
-                        <b class="title product-filter-label">Фильтр:</b>
+                        <div class="product-filter-head-inner">
+                            <span class="title product-filter-label">Фильтр:</span>
+                        </div>
                     </div>
                     <form class="product-filter-form" action="/" method="get">
-                        <!-- Фильтр по цене -->
-                        <div class="filter-box">
-                            <fieldset>
-                                <legend>Стоимость</legend>
-                                <label for="min_price">Минимальная цена</label>
-                                <input type="text" name="min_price" id="min_price">
+                        <div class="product-filter-form-inner">
+                            <!-- Фильтр по цене -->
+                            <div class="filter-box">
+                                <fieldset>
+                                    <legend>Стоимость</legend>
+                                    <div class="price-filter-wrapper">
+                                        <label for="min_price">Минимальная цена</label>
+                                        <input type="text" name="min_price" id="min_price">
 
-                                <label for="max_price">Максимальная цена</label>
-                                <input type="text" name="max_price" id="max_price">
-                            </fieldset>
-                        </div>
-                        <!-- Фильтр по цвету -->
-                        <div class="filter-box">
-                            <fieldset>
-                                <legend>Цвет</legend>
-                                <ul class="checkbox-list">
-                                    <li>
-                                        <input class="visually-hidden checkbox-input" type="checkbox" name="color_black" id="color_black" checked>
-                                        <label class="checkbox-label" for="color_black">Черный</label>
-                                    </li>
-                                    <li>
-                                        <input class="visually-hidden checkbox-input" type="checkbox" name="color_white" id="color_white">
-                                        <label class="checkbox-label" for="color_white">Белый</label>
-                                    </li>
-                                    <li>
-                                        <input class="visually-hidden checkbox-input" type="checkbox" name="color_blue" id="color_blue" checked>
-                                        <label class="checkbox-label" for="color_blue">Синий</label>
-                                    </li>
-                                    <li>
-                                        <input class="visually-hidden checkbox-input" type="checkbox" name="color_red" id="color_red" checked>
-                                        <label class="checkbox-label" for="color_red">Красный</label>
-                                    </li>
-                                    <li>
-                                        <input class="visually-hidden checkbox-input" type="checkbox" name="color_pink" id="color_pink">
-                                        <label class="checkbox-label" for="color_pink">Розовый</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                        </div>
+                                        <label for="max_price">Максимальная цена</label>
+                                        <input type="text" name="max_price" id="max_price">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Фильтр по цвету -->
+                            <div class="filter-box">
+                                <fieldset>
+                                    <legend>Цвет</legend>
+                                    <ul class="checkbox-list">
+                                        <li>
+                                            <input class="visually-hidden checkbox-input" type="checkbox" name="color_black" id="color_black" checked>
+                                            <label class="checkbox-label" for="color_black">Черный</label>
+                                        </li>
+                                        <li>
+                                            <input class="visually-hidden checkbox-input" type="checkbox" name="color_white" id="color_white">
+                                            <label class="checkbox-label" for="color_white">Белый</label>
+                                        </li>
+                                        <li>
+                                            <input class="visually-hidden checkbox-input" type="checkbox" name="color_blue" id="color_blue" checked>
+                                            <label class="checkbox-label" for="color_blue">Синий</label>
+                                        </li>
+                                        <li>
+                                            <input class="visually-hidden checkbox-input" type="checkbox" name="color_red" id="color_red" checked>
+                                            <label class="checkbox-label" for="color_red">Красный</label>
+                                        </li>
+                                        <li>
+                                            <input class="visually-hidden checkbox-input" type="checkbox" name="color_pink" id="color_pink">
+                                            <label class="checkbox-label" for="color_pink">Розовый</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </div>
 
-                        <!-- Фильтр по наличию Bluetooth -->
-                        <div class="filter-box">
-                            <fieldset>
-                                <legend>Bluetooth</legend>
-                                <ul class="radio-list">
-                                    <li>
-                                        <input class="radio-input visually-hidden" type="radio" name="bluetooth" id="bluetooth" value="yes" checked>
-                                        <label class="radio-label" for="bluetooth">Есть</label>
-                                    </li>
-                                    <li>
-                                        <input class="radio-input visually-hidden" type="radio" name="bluetooth" id="no_bluetooth" value="no">
-                                        <label class="radio-label" for="no_bluetooth">Нет</label>
-                                </ul>
-                            </fieldset>
-                        </div>
+                            <!-- Фильтр по наличию Bluetooth -->
+                            <div class="filter-box">
+                                <fieldset>
+                                    <legend>Bluetooth</legend>
+                                    <ul class="radio-list">
+                                        <li>
+                                            <input class="radio-input visually-hidden" type="radio" name="bluetooth" id="bluetooth" value="yes" checked>
+                                            <label class="radio-label" for="bluetooth">Есть</label>
+                                        </li>
+                                        <li>
+                                            <input class="radio-input visually-hidden" type="radio" name="bluetooth" id="no_bluetooth" value="no">
+                                            <label class="radio-label" for="no_bluetooth">Нет</label>
+                                    </ul>
+                                </fieldset>
+                            </div>
 
-                        <button class="button filter-submit" type="submit">Показать</button>
+                            <button class="button filter-submit" type="submit">Показать</button>
+                        </div>
                     </form>
                 </section>
+
 
                 <!-- КАТАЛОГ ТОВАРОВ -->
 
@@ -202,32 +209,36 @@
 
                     <!-- Сортировка товаров -->
                     <div class="product-sorting">
-                        <div class="product-sorting-types-wripper">
-                            <b class="title product-sorting-label">Сортировка:</b>
-                            <ul class="product-sorting-types">
+                        <div class="product-sorting-inner">
+                            <div class="product-sorting-types-wrapper">
+                                <span class="title product-sorting-label">Сортировка:</span>
+                                <ul class="product-sorting-types">
+                                    <li>
+                                        <a class="product-sorting-link current-product-sorting-link" href="">По цене</a>
+                                    </li>
+                                    <li>
+                                        <a class="product-sorting-link" href="">По типу</a>
+                                    </li>
+                                    <li>
+                                        <a class="product-sorting-link" href="">По популярности</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <ul class="product-sorting-icons">
                                 <li>
-                                    <a class="product-sorting-link current-product-sorting-link" href="">По цене</a>
+                                    <a class="product-sorting-icon" href="">
+                                        <img src="img/catalog/icon-up-dir.svg" alt="Сортировать по возрастанию" width="11" height="10">
+                                    </a>
                                 </li>
                                 <li>
-                                    <a class="product-sorting-link" href="">По типу</a>
-                                </li>
-                                <li>
-                                    <a class="product-sorting-link" href="">По популярности</a>
+                                    <a class="product-sorting-icon current-product-sorting-icon" href="">
+                                        <img src="img/catalog/icon-down-dir.svg" alt="Сортировать по убыванию" width="11" height="10">
+                                    </a>
                                 </li>
                             </ul>
-                        </div>
-                        <ul>
-                            <li>
-                                <a class="product-sorting-icon current-product-sorting-icon" href="">
-                                    <img src="img/catalog/icon-up-dir.svg" alt="Сортировать по возрастанию" width="11" height="10">
-                                </a>
-                            </li>
-                            <li>
-                                <a class="product-sorting-icon" href="">
-                                    <img src="img/catalog/icon-down-dir.svg" alt="Сортировать по убыванию" width="11" height="10">
-                                </a>
-                            </li>
-                        </ul>
+
+                        </div> <!-- / .product-sorting-inner -->
                     </div>
 
                     <!-- Списое товаров -->
@@ -254,9 +265,9 @@
                                 <img class="product-image" src="img/catalog/item-2.jpg" alt="" width="360" height="380">
                                 <div class="product-description">
                                     <h3 class="title product-title">
-                                        Профессиональная селфи-палка
+                                        Профессиональная <br> селфи-палка
                                     </h3>
-                                    <span class="product-price">1500 руб.</span>
+                                    <span class="product-price">1 500 руб.</span>
                                 </div>
                             </a>
                             <div class="hidden-block">
@@ -274,7 +285,7 @@
                                     <h3 class="title product-title">
                                         Непотопляемая селфи-палка
                                     </h3>
-                                    <span class="product-price">2500 руб.</span>
+                                    <span class="product-price">2 500 руб.</span>
                                 </div>
 
                             </a>
@@ -284,8 +295,8 @@
                                     <a class="add-to-compare" href="">Добавить к сравнению</a>
                                 </p>
                             </div>
-
                         </li>
+
                         <li class="product-item new-product-item">
                             <a href="">
                                 <img class="product-image" src="img/catalog/item-4.jpg" alt="" width="360" height="380">
@@ -293,7 +304,7 @@
                                     <h3 class="title product-title">
                                         Селфи-палка «Следуй за мной»
                                     </h3>
-                                    <span class="product-price">4900 руб.</span>
+                                    <span class="product-price">4 900 руб.</span>
                                 </div>
                             </a>
                             <div class="hidden-block">
@@ -326,6 +337,8 @@
 
                 </section> <!--  / .product-block  -->
             </section>
+
+
 
 
 
