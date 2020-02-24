@@ -262,7 +262,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
+    min-height: 51px;
 }
 
 
