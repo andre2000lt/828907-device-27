@@ -142,12 +142,20 @@
                             <div class="filter-box">
                                 <fieldset>
                                     <legend>Стоимость</legend>
-                                    <div class="price-filter-wrapper">
-                                        <label for="min_price">Минимальная цена</label>
-                                        <input type="text" name="min_price" id="min_price">
+                                    <div class="price-filter">
+                                        <div class="scale">
+                                            <div class="bar"></div>
 
-                                        <label for="max_price">Максимальная цена</label>
-                                        <input type="text" name="max_price" id="max_price">
+                                            <div class="toggle toggle-min"></div>
+                                            <div class="toggle toggle-max"></div>
+                                        </div>
+
+                                        <label for="min_price">от</label>
+                                        <input class="min-price-input" type="text" name="min_price" id="min_price" value="0">
+
+                                        <label for="max_price">до</label>
+                                        <input class="max-price-input" type="text" name="max_price" id="max_price" value="5000">
+
                                     </div>
                                 </fieldset>
                             </div>

@@ -113,8 +113,13 @@
 
             <article class="slider">
                 <div class="container slider-inner">
+
+                    <input class="visually-hidden" type="radio" id="radio-1" name="slider-toggle" checked>
+                    <input class="visually-hidden" type="radio" id="radio-2" name="slider-toggle">
+                    <input class="visually-hidden" type="radio" id="radio-3" name="slider-toggle">
+
                     <div class="slider-slides">
-                        <div class="slide">
+                        <div class="slide" id="slide-1">
                             <div class="slide-image">
                                 <a href="">
                                     <img src="img/slider-1.png" alt="Самая длинная cелфи палка" width="384" height="486">
@@ -129,7 +134,15 @@
                                     Восемь (Восемь, Карл!) метров длиной и весом всего 5
                                     килограмм.
                                 </p>
-                                <a class="button slaide-more-details-link" href="">Подробнее</a>
+                                <div class="slide-buttons">
+                                    <a class="button slide-more-details-link" href="">Подробнее</a>
+                                    <div class="slider-controller">
+                                        <label for="radio-1"></label>
+                                        <label for="radio-2"></label>
+                                        <label for="radio-3"></label>
+                                    </div>
+                                </div>
+
                                 <table class="slide-table">
                                     <tr class="slide-table-row">
                                         <td>8,5 м</td>
@@ -146,18 +159,29 @@
 
                         </div> <!-- / .slide -->
 
-                        <div class="slide">
-                            <a href="">
-                                <img src="img/slider-2.png" alt="Фитнес браслет для похудения" width="384" height="486">
-                            </a>
+                        <div class="slide" id="slide-2">
+                            <div class="slide-image">
+                                <a href="">
+                                    <img src="img/slider-2.png" alt="Фитнес браслет для похудения" width="345" height="485">
+                                </a>
+                            </div>
                             <div class="slide-right-side">
                                 <h2 class="title slide-title">Худеем <br> правильно!</h2>
 
                                 <p class="slide-text">
-                                    Мотивирующие фитнес-браслеты помогут найти в себе силы
+                                    Мотивирующие фитнес-браслеты помогут найти в себе силы <br>
                                     не пропускать занятия и соблюдать диету.
                                 </p>
-                                <a class="button slaide-more-details-link" href="">Подробнее</a>
+
+                                <div class="slide-buttons">
+                                    <a class="button slide-more-details-link" href="">Подробнее</a>
+                                    <div class="slider-controller">
+                                        <label for="radio-1"></label>
+                                        <label for="radio-2"></label>
+                                        <label for="radio-3"></label>
+                                    </div>
+                                </div>
+
                                 <table class="slide-table">
                                     <tr class="slide-table-row">
                                         <td>48 часов</td>
@@ -169,19 +193,29 @@
                             </div>
                         </div> <!-- / .slide -->
 
-                        <div class="slide">
-                            <a href="">
-                                <img src="img/slider-3.png" alt="Квадрокоптер с лазером" width="384" height="486">
-                            </a>
+                        <div class="slide" id="slide-3">
+                            <div class="slide-image">
+                                <a href="">
+                                    <img src="img/slider-3.png" alt="Квадрокоптер с лазером" width="526" height="334">
+                                </a>
+                            </div>
                             <div class="slide-right-side">
                                 <h2 class="title slide-title">Порхает как бабочка, <br> жалит как пчела!</h2>
 
                                 <p class="slide-text">
-                                    Этот обычный, на первый взгляд, квадрокоптер оснащен
+                                    Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
                                     мощным лазером, замаскированным под стандартную камеру.
                                 </p>
-                                <a class="button slaide-more-details-link" href="">Подробнее</a>
-                                <table class="slide-table">
+
+                                <div class="slide-buttons">
+                                    <a class="button slide-more-details-link" href="">Подробнее</a>
+                                    <div class="slider-controller">
+                                        <label for="radio-1"></label>
+                                        <label for="radio-2"></label>
+                                        <label for="radio-3"></label>
+                                    </div>
+                                </div>
+                                <table class="slide-table slide-table-double">
                                     <tr class="slide-table-row">
                                         <td>800 м</td>
                                         <td>50 м</td>
@@ -206,32 +240,50 @@
                 <h2 class="visually-hidden">Категории товаров</h2>
                 <div class="container popular-categories-inner">
                     <ul class="popular-categories-list">
-                        <li>
+                        <li class="popular-categories-item">
+                            <div class="popular-category-image-wrapper">
+
+                            </div>
                             <h3 class="title popular-category-title">
                                 <a href="">Виртуальная реальность</a>
                             </h3>
                         </li>
-                        <li>
+                        <li class="popular-categories-item">
+                            <div class="popular-category-image-wrapper">
+
+                            </div>
                             <h3 class="title popular-category-title">
-                                <a href="">Моноподы для селфи</a>
+                                <a href="">Моноподы <br> для селфи</a>
                             </h3>
                         </li>
-                        <li>
+                        <li class="popular-categories-item">
+                            <div class="popular-category-image-wrapper">
+
+                            </div>
                             <h3 class="title popular-category-title">
                                 <a href="">Экшн-камеры</a>
                             </h3>
                         </li>
-                        <li>
+                        <li class="popular-categories-item">
+                            <div class="popular-category-image-wrapper">
+
+                            </div>
                             <h3 class="title popular-category-title">
                                 <a href="">Фитнес-браслеты</a>
                             </h3>
                         </li>
-                        <li>
+                        <li class="popular-categories-item">
+                            <div class="popular-category-image-wrapper">
+
+                            </div>
                             <h3 class="title popular-category-title">
                                 <a href="">Умные часы</a>
                             </h3>
                         </li>
-                        <li>
+                        <li class="popular-categories-item">
+                            <div class="popular-category-image-wrapper">
+
+                            </div>
                             <h3 class="title popular-category-title">
                                 <a href="">Квадрокоптеры</a>
                             </h3>
@@ -244,20 +296,21 @@
 
             <section class="serviсes">
                 <h2 class="visually-hidden">Сервисы</h2>
+
                 <div class="container services-inner">
                     <ul class="services-menu">
                         <li>
-                            <button class="button services-button current-services-button" type="button" tabindex="-1">Доставка</button>
+                            <button class="button services-button current-services-button" id="first-slide-button" type="button" tabindex="-1">Доставка</button>
                         </li>
                         <li>
-                            <button class="button services-button" type="button">Гарантии</button>
+                            <button class="button services-button" id="second-slide-button" type="button">Гарантии</button>
                         </li>
                         <li>
-                            <button class="button services-button" type="button">Кредит</button>
+                            <button class="button services-button" id="third-slide-button"  type="button">Кредит</button>
                         </li>
                     </ul>
 
-                    <div class="current-servise">
+                    <div class="current-service">
                         <div class="services-list">
                             <section class="service">
                                 <h2 class="title section-title">Доставка</h2>
@@ -272,7 +325,7 @@
                                 <h2 class="title section-title">Гарантия</h2>
                                 <p class="service-text">
                                     Если из-за возгорания купленного у нас товара у вас
-                                    сгорит дом — не переживайте, мы выдадим вам новый.
+                                    сгорит дом — не переживайте, мы выдадим вам новый. <br>
                                     Товар, не дом, конечно же.
                                 </p>
                             </section>
@@ -542,6 +595,8 @@
                 <path  d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/>
             </symbol>
         </svg>
+
+        <script src="js/script.js"></script>
     </body>
 
 </html>
