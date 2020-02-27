@@ -84,6 +84,20 @@ body {
    }
  }
 
+ @keyframes hide {
+   0% {
+     transform: translateY(0);
+   }
+
+   50% {
+     transform: translateY(-100px);
+   }
+
+   100% {
+     transform: translateX(2000px);
+   }
+ }
+
 
  @keyframes shake {
   0%,
@@ -117,6 +131,11 @@ body {
 
     animation-name: bounce;
     animation-duration: 0.5s;
+}
+
+.modal-window-hide-animation {
+    animation-name: hide;
+    animation-duration: 2s;
 }
 
 .window-close-button {

@@ -84,6 +84,7 @@ write_us_link.addEventListener("click", function(evt)
 {
     evt.preventDefault();
     write_us_window.classList.add("modal-window-visible");
+    write_us_window.classList.remove("modal-window-hide-animation");
 
     var focused_field = name_field;
     if ( isStorageSupport )
@@ -107,11 +108,21 @@ write_us_link.addEventListener("click", function(evt)
 
 // Закрытие модального окно по нажатию крестика
 
+
 function hideWindowByClick(close_button, modal_window)
 {
     close_button.addEventListener("click", function(evt)
     {
-        modal_window.classList.remove("modal-window-visible");
+        modal_window.classList.add("modal-window-hide-animation");
+
+        function unvisible()
+        {
+            modal_window.classList.remove("modal-window-visible");
+        }
+
+        setTimeout(unvisible, 1900);
+
+
     });
 }
 
@@ -128,7 +139,14 @@ function hideWindowByEsc(modal_window)
             evt.preventDefault();
             if( modal_window.classList.contains("modal-window-visible") )
             {
-                modal_window.classList.remove("modal-window-visible");
+                modal_window.classList.add("modal-window-hide-animation");
+
+                function unvisible()
+                {
+                    modal_window.classList.remove("modal-window-visible");
+                }
+
+                setTimeout(unvisible, 1900);
             }
         }
     });
@@ -182,6 +200,8 @@ map_link.addEventListener("click", function(evt)
 {
     evt.preventDefault();
     map_window.classList.add("modal-window-visible");
+    map_window.classList.remove("modal-window-hide-animation");
+
 });
 
 hideWindowByClick(close_map_window, map_window);
