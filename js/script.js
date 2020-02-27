@@ -154,6 +154,9 @@ write_us_form.addEventListener("submit", function (evt)
     if ( invalid_fields )
     {
         evt.preventDefault();
+        write_us_window.classList.remove("submit-invalid");
+        write_us_window.offsetWidth = write_us_window.offsetWidth;
+        write_us_window.classList.add("submit-invalid");
         console.log("Заполните все поля");
     }
     else
