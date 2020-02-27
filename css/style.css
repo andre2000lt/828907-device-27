@@ -1205,25 +1205,18 @@ body {
     width: 960px;
     height: 559px;
     background-color: #eaeaea;
+    background-image: url("../img/map-big.png");
+    background-size: cover;
     box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
 .map_window iframe
 {
-    position: relative;
-    z-index: 2;
+
     border: none;
 }
 
-.map_window .map-big
-{
-    position: absolute;
-    z-index: 1;
-    width: 960px;
-    height: 559px;
-    background-image: url("../img/map-big.png");
-    background-size: cover;
-}
+
 
 .map-window .window-close-button {
     top: 22px;
