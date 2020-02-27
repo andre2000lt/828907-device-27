@@ -307,7 +307,7 @@ body {
     border-width: 0;
     background-color: transparent;
     opacity: 0.3;
-    height: 49.5px;
+    height: 51.5px;
     width: 355px;
     padding-left: 37px;
 }
@@ -375,7 +375,6 @@ body {
     min-width: 500px;
     max-width: 550px;
     padding-top: 10px;
-
 }
 
 .header .user-menu {
@@ -474,7 +473,7 @@ body {
 }
 
 .product-navigation li {
-    /* display: flex; */
+
     position: relative;
 }
 
@@ -1746,8 +1745,10 @@ body {
 }
 
 .product-sorting {
+    display: flex;  // Для IE 11 (по другому не работает align-items: center в .product-sorting-inner, ошибка с min-height)
+    flex-direction: column;
     background-color: #ebebeb;
-    height: 70px;
+    min-height: 70px;
 }
 
 .product-sorting-inner {
@@ -1755,7 +1756,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 832px;
-    height: 70px;
+    min-height: 70px;
     background-color: #ebebeb;
     padding-left: 75px;
 }
@@ -1773,6 +1774,7 @@ body {
 
 .product-sorting-types {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     width: 400px;
 }
