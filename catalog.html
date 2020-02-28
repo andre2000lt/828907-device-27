@@ -5,7 +5,7 @@
         <title>Девайс: Каталог товаров</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
@@ -13,7 +13,7 @@
 
         <header class="header">
             <div class="container header-inner">
-                <!-- Логотип -->
+                <!-- Верх шапки -->
                 <div class="header-top">
                     <a class="device-logo-link" href="index.html">
                         <svg class="device-logo" width="163" height="35" role="img" aria-label="Логотип сайта">
@@ -21,6 +21,7 @@
                         </svg>
                     </a>
                 </div>
+                <!-- Cередина шапки -->
                 <div class="header-middle">
                     <!-- Форма поиска -->
                     <form class="search-form" action="/" method="get">
@@ -44,10 +45,7 @@
                         </div>
                     </div>
                 </div> <!-- / .header-middle -->
-
-
-                <!-- НАВИГАЦИЯ -->
-
+                <!-- НАВИГАЦИЯ, низ шапки-->
                 <nav class="main-navigation">
                     <ul class="product-navigation">
                         <li>
@@ -89,6 +87,7 @@
                         </li>
                     </ul> <!-- / .product-navigation -->
 
+                    <!-- Правая сторона низа шапки -->
                     <div class="header-bottom-right">
                         <ul class="service-navigation">
                             <li>
@@ -130,12 +129,13 @@
 
             <section class="products">
                 <h2 class="visually-hidden">Товары</h2>
+
                 <!-- ФИЛЬТР ТОВАРОВ  -->
                 <section class="product-filter">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
                     <div class="product-filter-head">
-                        <div class="product-filter-head-inner">
-                            <span class="title product-filter-label">Фильтр:</span>
+                        <div class="title product-filter-head-inner">
+                            Фильтр:
                         </div>
                     </div>
                     <form class="product-filter-form" action="/" method="get">
@@ -144,6 +144,7 @@
                             <div class="filter-box">
                                 <fieldset>
                                     <legend>Стоимость</legend>
+
                                     <div class="price-filter">
                                         <div class="scale">
                                             <div class="bar"></div>
@@ -157,7 +158,6 @@
 
                                         <label for="max_price">до</label>
                                         <input class="max-price-input" type="text" name="max_price" id="max_price" value="5000" readonly>
-
                                     </div>
                                 </fieldset>
                             </div>
@@ -165,6 +165,7 @@
                             <div class="filter-box">
                                 <fieldset>
                                     <legend>Цвет</legend>
+
                                     <ul class="checkbox-list">
                                         <li>
                                             <input class="visually-hidden checkbox-input" type="checkbox" name="color_black" id="color_black" checked>
@@ -189,7 +190,6 @@
                                     </ul>
                                 </fieldset>
                             </div>
-
                             <!-- Фильтр по наличию Bluetooth -->
                             <div class="filter-box">
                                 <fieldset>
@@ -202,18 +202,16 @@
                                         <li>
                                             <input class="radio-input visually-hidden" type="radio" name="bluetooth" id="no_bluetooth" value="no">
                                             <label class="radio-label" for="no_bluetooth">Нет</label>
+                                        </li>
                                     </ul>
                                 </fieldset>
                             </div>
-
                             <button class="button filter-submit" type="submit">Показать</button>
                         </div>
                     </form>
                 </section>
 
-
                 <!-- КАТАЛОГ ТОВАРОВ -->
-
                 <section class="product-block">
                     <h2 class="visually-hidden">Каталог товаров</h2>
 
@@ -251,14 +249,12 @@
                                     </a>
                                 </li>
                             </ul>
-
                         </div> <!-- / .product-sorting-inner -->
                     </div>
 
                     <!-- Списое товаров -->
                     <ul class="product-list">
                         <li class="product-item">
-
                             <img class="product-image" src="img/catalog/item-1.jpg" alt="" width="360" height="380">
                             <div class="product-description">
                                 <a href="">
@@ -277,7 +273,6 @@
                             </div>
                         </li>
                         <li class="product-item">
-
                             <img class="product-image" src="img/catalog/item-2.jpg" alt="" width="360" height="380">
                             <div class="product-description">
                                 <a href="">
@@ -294,10 +289,8 @@
                                     <a class="add-to-compare" href="">Добавить к сравнению</a>
                                 </p>
                             </div>
-
                         </li>
                         <li class="product-item">
-
                             <img class="product-image" src="img/catalog/item-3.jpg" alt="" width="360" height="380">
                             <div class="product-description">
                                 <a href="">
@@ -315,9 +308,7 @@
                                 </p>
                             </div>
                         </li>
-
                         <li class="product-item new-product-item">
-
                             <img class="product-image" src="img/catalog/item-4.jpg" alt="" width="360" height="380">
                             <div class="product-description">
                                 <a href="">
@@ -334,13 +325,10 @@
                                     <a class="add-to-compare" href="">Добавить к сравнению</a>
                                 </p>
                             </div>
-
                         </li>
-
                     </ul>
 
                     <!-- ПАГИНАЦИЯ -->
-
                     <div class="pagination">
                         <a class="pagination-button" href="">Назад</a>
                         <ul class="page-numbers-list">
@@ -356,17 +344,14 @@
                         </ul>
                         <a class="pagination-button" href="">Вперед</a>
                     </div>
-
                 </section> <!--  / .product-block  -->
             </section>
-
         </main>
 
         <!-- ПОДВАЛ -->
 
         <footer class="footer">
             <div class="container footer-inner">
-
                 <!-- Верх подвала -->
                 <div class="footer-top">
                     <!-- Логотип -->
@@ -386,7 +371,6 @@
                                 <a class="transparent-button logout-link" href="">Выйти</a>
                             </li>
                         </ul>
-
                         <div class="footer-buttons">
                             <a class="transparent-button compare-link" href="">Сравнить</a>
                             <a class="transparent-button cart-link" href="">Корзина</a>
@@ -396,8 +380,7 @@
 
                 <!-- Середина подвала -->
                 <div class="footer-middle">
-                    <span class="store-address">г. Москва, ул. Строителей, 15</span>
-
+                    <p class="store-address">г. Москва, ул. Строителей, 15</p>
                     <!-- Навинация -->
                     <ul class="footer-navigation">
                         <li>
@@ -416,8 +399,6 @@
 
                 <!-- Низ подвала -->
                 <div class="footer-bottom">
-
-
                     <div class="footer-bottom-right">
                          <!--Социальные сети  -->
                         <ul class="socials">
@@ -428,7 +409,6 @@
                                     </svg>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="https://instagram.com">
                                     <svg width="32" height="32" aria-label="Перейти на Инстаграм">
@@ -436,7 +416,6 @@
                                     </svg>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="https://twitter.com">
                                     <svg width="32" height="32" aria-label="Перейти на Твитер">
@@ -444,9 +423,7 @@
                                     </svg>
                                 </a>
                             </li>
-
                         </ul>
-
                         <!-- Ссылка на интенсив htmlacademy -->
                         <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
                             <svg width="26.943px" height="34.09px" aria-label="Ссылка на интенсив htmlacademy">
@@ -456,11 +433,10 @@
                     </div>
                 </div><!-- / .footer-bottom -->
             </div><!-- / .conteiner -->
-
         </footer>
 
+        <!-- External SVG -->
 
-        <!-- DEVICE LOGO SVG -->
         <svg class="external-svg" xmlns="http://www.w3.org/2000/svg">
 
             <!-- Логотип Device -->
@@ -499,8 +475,6 @@
             <symbol id="icon-down" viewBox="0 0 11 10">
                 <path fill="#231F20" d="M5.5 10L0 0h11"/>
             </symbol>
-
         </svg>
     </body>
-
-    </html>
+</html>
