@@ -704,7 +704,7 @@ body {
     line-height: 56px;
     letter-spacing: 0.47px;
 
-    width:505px;
+    width:508px;
     margin:0;
     margin-bottom: 18px;
 }
@@ -905,12 +905,12 @@ body {
     background-color: #f0c52e;
 }
 
-.popular-categories-item:active svg {
+.popular-categories-item:active {
     opacity: 0.3
 }
 
-.popular-categories-item:active .popular-category-title {
-    opacity: 0.3
+.ie11-solution {
+  pointer-events: none;
 }
 
 .popular-category-title {
