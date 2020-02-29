@@ -835,7 +835,7 @@ body {
     background-color: rgba(240, 197, 46, 0.5);
 }
 
-.popular-categories-item:first-child svg{
+.popular-categories-item .virtual-reality {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -846,7 +846,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.popular-categories-item:nth-child(2) svg {
+.popular-categories-item .monopods-for-selfie {
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -857,7 +857,7 @@ body {
     transform: translate(-50%);
 }
 
-.popular-categories-item:nth-child(3) svg {
+.popular-categories-item .action-cams {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -868,7 +868,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.popular-categories-item:nth-child(4) svg {
+.popular-categories-item .fitness-bracelets {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -879,7 +879,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.popular-categories-item:nth-child(5) svg {
+.popular-categories-item .smart-watch {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -890,7 +890,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.popular-categories-item:nth-child(6) svg {
+.popular-categories-item .quadcopters {
     position: absolute;
     top: 50%;
     left: 50%;
