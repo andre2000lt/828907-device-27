@@ -1,4 +1,4 @@
-
+// Главный слайдер
 
 var main_slider_radio = document.querySelectorAll(".main-slider-radio");
 var main_slider_slides = document.querySelectorAll(".slide");
