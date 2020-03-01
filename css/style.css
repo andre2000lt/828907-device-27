@@ -763,15 +763,6 @@ body {
     outline: #4D90FE auto 1px;
 }
 
-#radio-2:focus ~ .slide label[for="radio-2"]
-{
-    outline: #4D90FE auto 1px;
-}
-
-#radio-3:focus ~ .slide label[for="radio-3"]
-{
-    outline: #4D90FE auto 1px;
-}
 
 .slide-more-details-link {
     min-width: 220px;
