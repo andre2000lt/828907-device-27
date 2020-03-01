@@ -758,9 +758,19 @@ body {
     background-image: url("../img/slider-button.svg");
 }
 
-.main-slider-radio:focus ~ .slide .slider-controller
+#radio-1:focus ~ .slide label[for="radio-1"]
 {
-    outline: auto;
+    outline: #4D90FE auto 1px;
+}
+
+#radio-2:focus ~ .slide label[for="radio-2"]
+{
+    outline: #4D90FE auto 1px;
+}
+
+#radio-3:focus ~ .slide label[for="radio-3"]
+{
+    outline: #4D90FE auto 1px;
 }
 
 .slide-more-details-link {
