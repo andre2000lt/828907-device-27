@@ -1,4 +1,35 @@
 
+
+var main_slider_radio = document.querySelectorAll(".main-slider-radio");
+var main_slider_slides = document.querySelectorAll(".slide");
+
+function hideSlides()
+{
+    for (var i = 0; i < main_slider_slides.length; i++)
+    {
+        main_slider_slides[i].style.display = "none";
+    }
+}
+
+function changeSlide(radio, slide)
+{
+    radio.addEventListener("change", function(evt)
+    {
+        hideSlides();
+        if ( radio.checked )
+        {
+            slide.style.display = "flex";
+            console.log(1);
+        }
+    });
+}
+
+for (var i = 0; i < main_slider_radio.length; i++)
+{
+    changeSlide(main_slider_radio[i], main_slider_slides[i]);
+}
+
+
 // ----- Переключаем слайды сервисов -----
 
 var services_buttons = document.querySelectorAll(".services-button");

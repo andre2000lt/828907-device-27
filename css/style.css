@@ -324,6 +324,7 @@ body {
     width: 355px;
     padding-left: 37px;
     border-width: 0;
+    border-bottom: 2px solid transparent;
 
     background-color: transparent;
     opacity: 0.3;
@@ -597,29 +598,12 @@ body {
 
 /* -- СЛАЙДЕР -- */
 .slider {
-    margin-bottom: 86px;
+    margin-bottom: 97px;
 }
 
 .slider-inner {
     position: relative;
     overflow: hidden;
-}
-
-#radio-1:checked ~ .slider-slides {
-    transform: translate(0);
-}
-
-#radio-2:checked ~ .slider-slides {
-    transform: translate(-1160px);
-}
-
-#radio-3:checked ~ .slider-slides {
-    transform: translate(-2320px);
-}
-
-.slider-slides {
-    display: flex;
-    width:300%;
 }
 
 .slide {
@@ -635,18 +619,25 @@ body {
     background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 115px, white 115px);
 }
 
+.slide:nth-of-type(2){
+    display: none;
+}
 
-.slide:first-child .slide-image {
+.slide:nth-of-type(3) {
+    display: none;
+}
+
+.slide:nth-of-type(1) .slide-image {
     padding-top: 4px;
     padding-left: 29px;
 }
 
-.slide:nth-child(2) .slide-image {
+.slide:nth-of-type(2) .slide-image {
     padding-top: 16px;
     padding-left: 55px;
 }
 
-.slide:nth-child(3) .slide-image {
+.slide:nth-of-type(3) .slide-image {
     padding-top: 68px;
     padding-left: 0px;
     margin-left: -28px;
@@ -684,15 +675,15 @@ body {
     font-family: "Gilroy", "Arial Black", sans-serif;
 }
 
-.slide:nth-child(1) .slide-right-side::after {
+.slide:nth-of-type(1) .slide-right-side::after {
     content:"01";
 }
 
-.slide:nth-child(2) .slide-right-side::after {
+.slide:nth-of-type(2) .slide-right-side::after {
     content:"02";
 }
 
-.slide:nth-child(3) .slide-right-side::after {
+.slide:nth-of-type(3) .slide-right-side::after {
     content:"03";
 }
 
@@ -718,11 +709,11 @@ body {
     padding-right: 5px;
 }
 
-.slide:nth-child(2) .slide-text {
+.slide:nth-of-type(2) .slide-text {
     padding-right: 45px;
 }
 
-.slide:nth-child(3) .slide-text {
+.slide:nth-of-type(3) .slide-text {
     padding-right: 30px;
 }
 
@@ -755,16 +746,21 @@ body {
     margin-right: 21px;
 }
 
-#radio-1:checked ~ .slider-slides label[for="radio-1"] {
+#radio-1:checked ~ .slide label[for="radio-1"] {
     background-image: url("../img/slider-button.svg");
 }
 
-#radio-2:checked ~ .slider-slides label[for="radio-2"] {
+#radio-2:checked ~ .slide label[for="radio-2"] {
     background-image: url("../img/slider-button.svg");
 }
 
-#radio-3:checked ~ .slider-slides label[for="radio-3"] {
+#radio-3:checked ~ .slide label[for="radio-3"] {
     background-image: url("../img/slider-button.svg");
+}
+
+.main-slider-radio:focus ~ .slide .slider-controller
+{
+    outline: auto;
 }
 
 .slide-more-details-link {
@@ -849,7 +845,7 @@ body {
 .popular-categories-item .monopods-for-selfie {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 3px;
 
     width: 86px;
     height: 117px;
@@ -1086,6 +1082,7 @@ body {
     z-index: 1;
 }
 
+.brand-link:focus .color-brand-image,
 .gray-brand-image:hover +.color-brand-image {
     display: block;
 }
