@@ -1,5 +1,4 @@
 
-
 // ----- Переключаем слайды сервисов -----
 
 var services_buttons = document.querySelectorAll(".services-button");
