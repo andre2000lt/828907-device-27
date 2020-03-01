@@ -19,7 +19,6 @@ function changeSlide(radio, slide)
         if ( radio.checked )
         {
             slide.style.display = "flex";
-            console.log(1);
         }
     });
 }
