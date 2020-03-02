@@ -360,6 +360,7 @@ body {
 
 .search-field:focus + .search-button {
     display: inline-block;
+    vertical-align: top;
 }
 
 .search-button {
@@ -379,6 +380,7 @@ body {
 .search-button:active,
 .search-button:focus {
     display: inline-block;
+    vertical-align: top;
     background-color: black;
     outline: none;
 }
@@ -2108,6 +2110,7 @@ body {
 
 .pagination-button {
     display: inline-block;
+    vertical-align: middle;
 
     font-size: 16px;
     line-height: 24px;
@@ -2123,7 +2126,6 @@ body {
     padding-left: 9px;
     padding-right: 11px;
 
-    vertical-align: middle;
     background-color: transparent;
 }
 
